@@ -1,9 +1,11 @@
-<h1>編集</h1>
-
-<%= form_for @tweet do |f| %>
-  <p>
-    <%= f.label :body,"ツイート" %>
-    <%= f.text_field :body %>
-  </p>
-  <%= f.submit '更新' %>
-<% end %>
+<div class="edit">
+ <h1>編集</h1>
+  <%= form_for @tweet do |f| %>
+    <p>
+      <%= f.label :body,"ツイート" %>
+      <br>
+      <%= f.text_area :body, class: "text"  %>
+    </p>
+    <%= f.submit '更新' %>
+  <% end %>
+ </div>

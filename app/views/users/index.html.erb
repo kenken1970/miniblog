@@ -1,6 +1,7 @@
-<h1>ユーザー一覧</h1>
-
-<% @users.each do |user| %>
-  <hr>
-  <p><span>email: </span><%=link_to user.email, user_path(user.id) %></p>
-<% end %>
+<div class="user-index">
+  <h1>ユーザー一覧</h1>
+  <% @users.each do |user| %>
+     <hr>
+     <p><span>email: </span><%=link_to user.email, user_path(user.id) %></p>
+  <% end %>
+</div>

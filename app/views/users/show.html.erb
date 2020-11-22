@@ -1,15 +1,17 @@
-<h1>ユーザー詳細</h1>
+<div class="user-show">
+  <h1>ユーザー詳細</h1>
+  <p><span>email: </span><%= @user.email %></p>
+ <div class="user-show-waku"> 
+   <% @tweets.each do |tweet| %>
+    <div class="user-show-item">
+      <p><span>ツイート内容: </span><br><%=link_to tweet.body, tweet_path(tweet.id) %></p>
+      <% if tweet.user_id == current_user.id %>
+      <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+      <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
+      <% end %>
+    </div>
+   <% end %>
+  </div> 
+</div>
 
-<hr>
-<p><span>email: </span><%= @user.email %></p>
-
-
-<% @tweets.each do |tweet| %>
-  <hr>
-  <p><span>ツイート内容: </span><%=link_to tweet.body, tweet_path(tweet.id) %></p>
-  <% if tweet.user_id == current_user.id %>
-  <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
-  <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
-  <% end %>
-  
-<% end %>
+<%= paginate(@tweets) %>

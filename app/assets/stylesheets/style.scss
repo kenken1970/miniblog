@@ -1,0 +1,135 @@
+// header START
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 20px;
+  padding: 0px 40px 0px 40px; 
+  background-color: #009B8A;
+  border-radius: 10px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+  color: #FFF;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-item {
+  margin-left: 30px;
+}
+
+.menu-item-link {
+  font-size: 17px;
+  font-weight: bold;
+  color: #FFF;
+}
+// header END
+
+// ツイート一覧
+.contents-link {
+  color: #000;
+}
+
+.contents {
+  margin: 20px auto;
+	padding: 20px;
+	width: 600px;
+	border-radius: 10px;
+	border: 2px solid #009B8A;
+	color: #009B8A;
+}
+
+.index-tweet {
+  margin: 120px 0px 0px 0px;
+  padding: 0px 40px 0px 40px; 
+}
+
+// ユーザー一覧
+.user-index {
+  margin: 120px 0px 0px 0px;
+  padding: 0px 40px 0px 40px; 
+  
+}
+
+// ユーザー詳細
+.user-show {
+  margin: 120px 0px 0px 0px;
+  padding: 0px 40px 0px 40px; 
+  
+}
+
+
+.user-show-item {
+　margin: 10px auto;
+	padding: 20px;
+	width: 600px;
+	border-radius: 10px;
+	border: 2px solid #009B8A;
+	color: #009B8A;
+}
+
+.user-show-waku {
+  margin: 20px auto;
+	padding: 20px 250px;
+	
+}
+
+// ツイート詳細
+.tweet-show {
+  margin: 120px 0px 0px 0px;
+  padding: 0px 40px 0px 40px; 
+}
+
+// 編集
+.edit {
+  margin: 120px 0px 0px 0px;
+  padding: 0px 40px 0px 40px; 
+}
+
+// 編集完了
+.update {
+  margin: 120px 0px 0px 0px;
+  padding: 0px 40px 0px 40px; 
+}
+
+// 新規投稿
+.new {
+  margin: 120px 0px 0px 0px;
+  padding: 0px 40px 0px 40px; 
+}
+
+// 新規登録
+.devise-new {
+  margin: 120px 0px 0px 0px;
+  padding: 0px 40px 0px 40px; 
+  
+}
+
+// ログイン
+.sessions {
+  margin: 120px 0px 0px 0px;
+  padding: 0px 40px 0px 40px; 
+  
+}
+
+.destroy {
+  margin: 120px 0px 0px 0px;
+  padding: 0px 40px 0px 40px; 
+  
+}
+
+.miniblog {
+  color: #FFF;
+  
+}
+
+.text {
+  width: 600px;
+  height: 300px;
+}

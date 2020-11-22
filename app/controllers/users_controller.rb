@@ -6,8 +6,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-# ===============追加==============
-    @tweets = @user.tweets
-# ================================
+    @tweets = @user.tweets.order("updated_at DESC").page(params[:page]).per(5)
   end
 end

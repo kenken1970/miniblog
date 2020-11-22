@@ -10,18 +10,22 @@
   </head>
 
   <body>
-  
+  <header class="header">
+    <h1><%= link_to "ミニブログ", tweets_path, class: "miniblog" %></h1>
+    <ul class="menu">
     <% if user_signed_in? %>  
-      <%= link_to "新規投稿", new_tweet_path %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      <%= link_to "ユーザー詳細", user_path(current_user.id) %>
+      <li class="menu-item"><%= link_to "新規投稿", new_tweet_path, class: "menu-item-link" %></li>
+      <li class="menu-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "menu-item-link" %></li>
+      <li class="menu-item"><%= link_to "ユーザー詳細", user_path(current_user.id), class: "menu-item-link" %></li>
     <% else %>
-      <%= link_to "新規登録", new_user_registration_path %>
-      <%= link_to "ログイン", new_user_session_path %>
+      <li class="menu-item"><%= link_to "新規登録", new_user_registration_path, class: "menu-item-link" %></li>
+      <li class="menu-item"><%= link_to "ログイン", new_user_session_path, class: "menu-item-link" %></li>
     <% end %>
-      <%= link_to "ツイート一覧", tweets_path %>
-      <%= link_to "ユーザー一覧", users_path %>
- 
+      <li class="menu-item"><%= link_to "ツイート一覧", tweets_path, class: "menu-item-link" %></li>
+      <li class="menu-item"><%= link_to "ユーザー一覧", users_path, class: "menu-item-link" %></li>
+    </ul>
+  </header>
     <%= yield %>
   </body>
 </html>
+

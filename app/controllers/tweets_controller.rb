@@ -13,7 +13,7 @@ class TweetsController < ApplicationController
   end
 
   def index
-    @tweets = Tweet.order("created_at DESC").page(params[:page]).per(5)
+    @tweets = Tweet.order("updated_at DESC").page(params[:page]).per(5)
   end
 
   def show
@@ -30,6 +30,7 @@ class TweetsController < ApplicationController
   
   def edit
     @tweet = Tweet.find(params[:id])
+    
   end
 
   def update
